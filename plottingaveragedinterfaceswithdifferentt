@@ -1,0 +1,31 @@
+for i=1:20:(n-(2*t))
+    f1=find(Finalcoordinates1(:,3)==i);
+    f2=find(Finalcoordinates2(:,3)==i);
+    f3=find(Finalcoordinates3(:,3)==i);
+    f4=find(Finalcoordinates4(:,3)==i);
+    cartcoor1=[]; cartcor2=[]; cartcoor3=[]; cartcoor4=[];
+    [cartcoor1(:,1),cartcoor1(:,2)]=pol2cart(FinalCoordinates1(f1,1),FinalCoordinates1(f1,2));
+    [cartcoor2(:,1),cartcoor2(:,2)]=pol2cart(FinalCoordinates2(f2,1),FinalCoordinates1(f2,2));
+    [cartcoor3(:,1),cartcoor3(:,2)]=pol2cart(FinalCoordinates3(f3,1),FinalCoordinates1(f3,2));
+    [cartcoor4(:,1),cartcoor4(:,2)]=pol2cart(FinalCoordinates4(f4,1),FinalCoordinates1(f4,2));
+    cartcoor1(:,1)=cartcoor1(:,1)+x1;
+    cartcoor1(:,2)=cartcoor1(:,2)+y1;
+    cartcoor2(:,1)=cartcoor2(:,1)+x1;
+    cartcoor2(:,2)=cartcoor2(:,2)+y1;
+    cartcoor3(:,1)=cartcoor3(:,1)+x1;
+    cartcoor3(:,2)=cartcoor3(:,2)+y1;
+    cartcoor4(:,1)=cartcoor4(:,1)+x1;
+    cartcoor4(:,2)=cartcoor4(:,2)+y1;
+    scatter(cartcor1(:,1),cartcoor1(:,2),20,'k','filled');
+    xlim([000 1600])
+    ylim([0 1200])
+    axis ij
+    hold on
+    plot(cartcoor1(:,1),cartcoor1(:,2),'k');
+    scatter(cartcor1(:,1),cartcoor1(:,2),20,'k','filled');
+    plot(cartcoor1(:,1),cartcoor1(:,2),'k');
+    scatter(cartcor1(:,1),cartcoor1(:,2),20,'k','filled');
+    plot(cartcoor1(:,1),cartcoor1(:,2),'k');
+    scatter(cartcor1(:,1),cartcoor1(:,2),20,'k','filled');
+    plot(cartcoor1(:,1),cartcoor1(:,2),'k');
+end
